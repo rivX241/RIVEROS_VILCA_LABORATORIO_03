@@ -35,13 +35,11 @@ public class DemoBatalla {
         mostrarNaves(flota2);
         System.out.println("\nNave con mayor número de puntos: " + mostrarMayorPuntos(misNaves));
     }
-    //Método para mostrar todas las naves
     public static void mostrarNaves(Nave [] flota){
         for (Nave nave : flota) {
             System.out.println(nave.toString());
         }
     }
-    //Método para mostrar todas las naves de un nombre que se pide por teclado
     public static void mostrarPorNombre(Nave [] flota){
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el nombre de la nave: ");
@@ -52,8 +50,6 @@ public class DemoBatalla {
             }
         }
     }
-    //Método para mostrar todas las naves con un número de puntos inferior o igual
-//al número de puntos que se pide por teclado
     public static void mostrarPorPuntos(Nave [] flota){
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el número de puntos para buscar las naves inferiores a este: ");
@@ -64,7 +60,6 @@ public class DemoBatalla {
             }
         }
     }
-    //Método que devuelve la Nave con mayor número de Puntos
     public static String mostrarMayorPuntos(Nave [] flota){
         int index = 0;
         for(int i=1;i< flota.length;i++){
@@ -74,8 +69,6 @@ public class DemoBatalla {
         }
         return flota[index].toString();
     }
-//Crear un método que devuelva un nuevo arreglo de objetos con todos los objetos previamente ingresados
-//pero aleatoriamente desordenados
     public static Nave[] nuevaFlota(Nave[] flota){
         Nave[] nuevaFlota = new Nave[flota.length];
         Random rand = new Random();
