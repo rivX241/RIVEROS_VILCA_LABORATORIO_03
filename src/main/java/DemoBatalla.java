@@ -12,12 +12,11 @@ public class DemoBatalla {
             System.out.print("Nombre: ");
             nomb = sc.next();
             System.out.print("Fila: ");
-            fil = sc.nextInt();
+            fil = sc    .nextInt();
             System.out.print("Columna: ");
             col = sc.next();
             System.out.print("Estado: ");
-            est = rand.nextBoolean();
-            System.out.println();
+            est = sc.nextBoolean();
             System.out.print("Puntos: ");
             punt = sc.nextInt();
             misNaves[i] = new Nave(); //Se crea un objeto Nave y se asigna su referencia a misNaves
@@ -31,6 +30,7 @@ public class DemoBatalla {
         mostrarNaves(misNaves);
         mostrarPorNombre(misNaves);
         mostrarPorPuntos(misNaves);
+        System.out.println("Flota desordenada");
         Nave[] flota2 = nuevaFlota(misNaves);
         mostrarNaves(flota2);
         System.out.println("\nNave con mayor número de puntos: " + mostrarMayorPuntos(misNaves));
@@ -43,7 +43,7 @@ public class DemoBatalla {
     public static void mostrarPorNombre(Nave [] flota){
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el nombre de la nave: ");
-        String name = sc.nextLine();
+                    String name = sc.nextLine();
         for(Nave naveBuscada : flota){
             if(naveBuscada.getNombre().equals(name)){
                 System.out.println(naveBuscada);
